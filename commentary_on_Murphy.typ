@@ -92,7 +92,7 @@ Murphy, "$C^*$-algebras And Operator Theory"の行間を埋めます。
     $
     となる。よって、$f = (f - f_(N_1)) + f_(N_1) in lS$と$f_k stretch(->, size: #120%)^(norm(dot)_infinity) f$が成り立つ。
 
-    したがって、$lS$の任意Cauthy列は収束するから、$lS$は\
+    したがって、$lS$の任意のCauthy列は収束するから、$lS$は\
     Banach.
   ]
   #v(-2em)
@@ -111,4 +111,34 @@ Murphy, "$C^*$-algebras And Operator Theory"の行間を埋めます。
     norm(f)_(infinity, B) & := sup_(s in S) thin norm(f(s))_B space (< infinity)
   $
   とおくと、$(lS , (dot), norm(dot)_(infinity,B))$はunital Banach algebra。
+]
+
+#h(1em)Normed space$X$と$x in X, space epsilon >0$に対して、$U(x,epsilon) := {y in X | norm(x - y) < epsilon}$を$x$の$epsilon$近傍としよう。
+#example[
+  #let lO = $ell^(infinity) (Omega)$
+  #let CbO = $C_b (Omega)$
+  $Omega in Top$とする。$CbO subset lO$を$Omega$上の$CC$値有界関数全体の集合とすると、$CbO$は$lO$のclosed unital subalgebraである。
+  
+  特に、$(CbO, (dot), norm(dot)_infinity)$はunital Banach algebra。
+]
+
+#proof[
+  #let lO = $ell^(infinity) (Omega)$
+  #let CbO = $C_b (Omega)$
+  非自明なのは$CbO$が$lO$のclosed setであることのみ。以下それを示そう:
+
+  ${f_k}$を$CbO$の点列であって$f in lO$に収束するものとする。このとき、$f in CbO$を示せばよい。これには、$c in CC, space epsilon >0$に対して$f^(-1)(U(c,epsilon))$がopenであることを示せば十分である。
+  
+  $omega in f^(-1)(U(c,epsilon))$とする。$delta > 0$であって$U(f(omega), delta) subset U(x,epsilon)$なるものを取る。
+  $f_k stretch(->, size: #120%)^(norm(dot)_infinity) f$であるから、ある$n in NN$があって$norm(f - f_n)_infinity < delta slash 3$となる。このとき、$V := f_n^(-1)(U(f_n (omega),delta slash 3))$をopen setとしよう。$omega' in V$に対して、
+  $
+    abs(f(omega') - f(omega)) &<= abs(f(omega') - f_n (omega'))
+    + abs(f_n (omega') - f_n (omega)) + abs(f_n (omega) - f (omega))\
+    &<= norm(f - f_n)_infinity
+    + abs(f_n (omega') - f_n (omega)) + norm(f - f_n)_infinity\
+    &< delta slash 3 + delta slash 3 + delta slash 3 = delta
+  $
+  であるから$omega' in f^(-1)(U(f(omega), delta))$。よって$V subset f^(-1)(U(f(omega), delta)) subset f^(-1)(U(c,epsilon))$である。また、$V$の定義より$omega in V$であるから、$V$は$f^(-1)(U(c,epsilon))$に含まれる$omega$の開近傍である。
+
+  $omega in f^(-1)(U(c,epsilon))$は任意であったから、以上の議論により$f^(-1)(U(c,epsilon))$がopenであることがわかった。
 ]
