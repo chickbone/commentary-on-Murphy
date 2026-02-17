@@ -61,13 +61,16 @@
   set list(indent: 2em)
   set enum(numbering: "(1)", indent: 2em)
 
-  set heading(numbering: "1. ")
-  show heading: set text(font: headfont, weight: "semibold", 18pt)
+  set heading(numbering: "1.")
+  show heading: set text(font: headfont, weight: "semibold")
+  show  heading.where(level: 1): set text(size: 18pt)
   show heading: it => {
     it
     v(-0.3em)
     par(text(size: 0pt, ""))
   }
+
+  show figure: set block(breakable: true)
 
   set outline(
     title: "目次",

@@ -9,18 +9,14 @@
 
 
 //identifier: same
-#let theorem = default_thm("定理")
+#let theorem = default_thm("Theorem")
 #let corollary = default_thm("系")
-#let proposition = default_thm("命題")
+#let proposition = default_thm("命題").with(numbering: none)
 #let lemma = default_thm("補題")
 #let definition = default_thm("定義")
 
 
-#let example = thmplain(
-  "example",
-  [*例*],
-).with(numbering: none)
-
+#let example = default_thm("Example")
 #let proof = thmproof(
   "proof",
   strong("証明"),
@@ -55,6 +51,8 @@
 #let supp = $op("supp")$
 #let Supp = $op("Supp")$
 
+#let Set = $sans("Set")$
+#let Top = $sans("Top")$
 #let alg = $hyph #h(0pt, weak: true) sans("alg")$
 
 //names

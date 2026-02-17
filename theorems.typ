@@ -132,7 +132,7 @@
         width: 100%,
         inset: (left: 0.5em, top: 0.2em, bottom: 0.2em),
         radius: 0pt,
-        breakable: false,
+        breakable: true,
         ..blockargs.named(),
         ..blockargs_individual.named(),
         align(left)[#title#name#separator#body]
