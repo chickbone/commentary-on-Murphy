@@ -40,7 +40,7 @@
     // height: auto,
     // flipped: false,
     //  margin: (left: 31.2694445mm, right: 31.2694445mm + 8em, top: 31.2044445mm, bottom: 21.3344445mm),
-    margin: (top : 40mm,bottom: 30mm),
+    margin: (top: 40mm, bottom: 30mm),
     // ( 31.2694445 * 2  - 3.88 - 4.23 - 1.76) / 2
     // binding: auto,
     // columns: 1,
@@ -54,6 +54,7 @@
     first-line-indent: 1em,
     justify: true,
     linebreaks: "simple",
+    justification-limits: (tracking: (min: -0.01em, max: 0.02em)),
   )
 
   show link: set text(fill: rgb("#0000ff"))
@@ -63,7 +64,7 @@
 
   set heading(numbering: "1.")
   show heading: set text(font: headfont, weight: "semibold")
-  show  heading.where(level: 1): set text(size: 18pt)
+  show heading.where(level: 1): set text(size: 18pt)
   show heading: it => {
     it
     v(-0.3em)
@@ -77,7 +78,7 @@
     indent: 1em,
   )
 
-  set outline.entry(fill:  repeat([.], gap: 0.30em))
+  set outline.entry(fill: repeat([.], gap: 0.30em))
   show outline.entry: it => {
     let prefix = text(font: headfont, weight: "semibold")[#it.prefix()]
     let inner = [

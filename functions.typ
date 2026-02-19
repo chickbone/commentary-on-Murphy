@@ -13,16 +13,25 @@
 #let corollary = default_thm("系")
 #let proposition = default_thm("命題").with(numbering: none)
 #let lemma = default_thm("補題")
-#let definition = default_thm("定義")
+#let definition = default_thm("定義").with(numbering: none)
 
 
 #let example = default_thm("Example")
 #let proof = thmproof(
   "proof",
   strong("証明"),
+  padding: (bottom: 1em),
   breakable: true,
 )
 
+#let subproof = thmproof(
+  "proof",
+  math.because,
+  separator: [#h(0.1em))#h(0.8em)],
+  padding: (bottom: 1em),
+  breakable: true,
+  stroke: (left: 1pt),
+)
 //#let qed = align(right)[#sym.qed]
 //#let semiqed = align(right)[#sym.ballot]
 
@@ -58,4 +67,4 @@
 //names
 #let CM = "Cohen-Macaulay"
 
-#let hat(b) = math.accent(b,math.hat, size: 130%)
+#let hat(b) = std.math.accent(b, math.hat, size: 140%)
