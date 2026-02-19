@@ -71,7 +71,7 @@
     par(text(size: 0pt, ""))
   }
 
-  show figure: set block(breakable: true)
+  //show figure: set block(breakable: true)
 
   set outline(
     title: "目次",

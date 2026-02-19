@@ -1,5 +1,4 @@
 #import "theorems.typ": *
-#show: thmrules
 
 #let default_thm(title) = thmbox(
   "theorem",
@@ -24,14 +23,14 @@
   breakable: true,
 )
 
-#let subproof = thmproof(
+#let subproof = thmplain(
   "proof",
   math.because,
   separator: [#h(0.1em))#h(0.8em)],
-  padding: (bottom: 1em),
   breakable: true,
+  inset: (left: 0.5em, top: 0.2em, bottom: 0.2em),
   stroke: (left: 1pt),
-)
+).with(numbering: none)
 //#let qed = align(right)[#sym.qed]
 //#let semiqed = align(right)[#sym.ballot]
 
