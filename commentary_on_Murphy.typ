@@ -5,6 +5,7 @@
 #show: conf.with(headtitle: [Murphy])
 #show: thmrules.with(qed-symbol: $square$)
 
+
 #v(2em)
 
 #align(center)[
@@ -13,6 +14,8 @@
   ]
 
   Kasshi K
+
+  #datetime.today().display(年月日)
 ]
 #v(2em)
 
