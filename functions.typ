@@ -9,10 +9,11 @@
 
 //identifier: same
 #let theorem = default_thm("Theorem")
+#let exercise = default_thm("Ex").with(numbering: none)
 #let corollary = default_thm("系")
 #let proposition = default_thm("命題").with(numbering: none)
 #let lemma = default_thm("補題")
-#let definition = default_thm("定義").with(numbering: none)
+#let definition = default_thm("定義")
 
 
 #let example = default_thm("Example")
@@ -67,3 +68,7 @@
 #let CM = "Cohen-Macaulay"
 
 #let hat(b) = std.math.accent(b, math.hat, size: 140%)
+
+#let 年月日 = "[year]年[month repr:numerical padding:none]月[day padding:none]日"
+
+#let 年月 = "[year]年[month repr:numerical padding:none]月"

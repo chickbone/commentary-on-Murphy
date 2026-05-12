@@ -19,7 +19,7 @@
 ]
 #v(2em)
 
-Murphy, "$C^*$-algebras And Operator Theory"の行間を埋めます。
+#cite(<MR1074574>, form: "prose") の行間を埋めます。
 #outline(target: heading)
 
 = Elementary Spectral Theory
@@ -364,3 +364,7 @@ $
 ]
 
 $M_(omega_oo)$は無限遠点で消える$hat(Omega)$の連続関数の集合なので、$f : Omega -> CC$がvanishing at infinityであるとは「$hat(Omega)$の無限遠点で消えている」と解釈することができる。こちらの方が$C_0 (Omega)$の定義の意味がわかりやすいかもしれない。
+
+
+
+#bibliography("references.bib")
