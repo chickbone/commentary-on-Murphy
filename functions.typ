@@ -17,6 +17,12 @@
 
 
 #let example = default_thm("Example")
+#let exampleja = thmbox(
+  "example",
+  "例",
+  stroke: (left: (thickness: 1pt, dash: "dashed")),
+).with(numbering: none)
+
 #let proof = thmproof(
   "proof",
   strong("証明"),
