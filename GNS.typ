@@ -70,6 +70,23 @@ $
 
 ここで、$phi_xi$はベクトル状態、$(pi_phi, cal(H)_phi, xi_phi)$はGNS constructionによる巡回表現である(定義は後述)。この対応は、$C^*$-環$A$の状態と巡回表現の同型類が1対1に対応することを意味している。つまり、$C^*$-環の巡回表現の同型類は、$C^*$-環の状態という内在的な対象と1対1に対応することがわかる。
 
+=  positve linear functional と state
+
+$C^*$-環$A$に対して、
+$
+  A_plus := {a in A_"sa" mid(|) sigma(a) subset RR_plus} =  {a^* a | a in A}
+$
+を$A$の正錐(positive cone)と呼ぶ。ここで、$A_"sa"$は$A$の自己共役元全体の集合、$sigma(a) subset CC$は$a$のスペクトルを表す。
+
+#definition("正値線形写像, positive map")[
+  $A$を$C^*$-環とする。線形写像$phi : A -> B$が正値線形写像(positive linear map)であるとは、$phi(A_plus) subset B_plus$を満たすことをいう。特に、$B = CC$のとき、$phi$は$A$の正値線形汎関数(positive linear functional)であるという。
+]
+
+#example-ja()[
+  
+]
+
+#pagebreak()
 @strung2021introduction @tomatsu2024operators
 
 #bibliography("references.bib", title: "参考文献", style: "ieee")
