@@ -18,7 +18,7 @@
 ]
 #v(2em)
 
-$C^*$-環論におけるGNS constructionについてまとめる。GNS constructionとは、Hilbert空間への巡回表現を状態とよばれる汎関数から構成する基本的な手法である。#cite(<MR1074574>, form: "prose")
+$C^*$-環論におけるGNS constructionについてまとめる。GNS constructionとは、Hilbert空間への巡回表現を状態とよばれる汎関数から構成する基本的な手法である。#cite(<MR1074574>, form: "prose")を主に参考にした。
 #outline(target: heading)
 
 = 導入
@@ -82,9 +82,46 @@ $
   $A$を$C^*$-環とする。線形写像$phi : A -> B$が正値線形写像(positive linear map)であるとは、$phi(A_plus) subset B_plus$を満たすことをいう。特に、$B = CC$のとき、$phi$は$A$の正値線形汎関数(positive linear functional)であるという。
 ]
 
-#example-ja()[
-  
+#example-ja("トレース")[
+  $A = M_n (CC)$のとき、
+  $
+    tr_n : A -> CC, space a mapsto 1/n sum_(i=1)^n a_(i i)
+  $
+  は$A$の正値線形汎関数である。実際、$a in M_n (CC)_+$に対して、$tr_n (a)$は$a$の固有値の平均であるから、非負実数となる。
 ]
+
+#example-ja("ベクトル状態")[
+
+  $cal(H)$をHilbert空間、$pi : A -> B(cal(H))$を表現($*$-homomorphism)とする。
+  
+  $xi in cal(H)$に対して、$phi_xi : A -> CC$を
+  $
+    phi_xi (a) := chevron.l pi(a) xi, xi chevron.r
+  $
+  と定めると、$phi_xi$は$A$の正値線形汎関数となる。実際、$a in A_+$に対して、
+  $ phi_xi (a) = chevron.l pi(a) xi, xi chevron.r = chevron.l pi(a^(1 slash 2)) xi, pi(a^(1 slash 2)) xi chevron.r >= 0 $である。
+]
+
+#proposition()[
+  $phi : A -> CC$が$A$の正値線形汎関数であるならば、有界である。
+]
+#proof[
+  まず$phi_(|A_plus) : A_plus -> RR_plus$が有界であることを示そう。そうでないと仮定する。このとき、$n in NN$に対して、$a_n in A_plus$が存在して、$norm(a_n) <= 1$かつ$phi(a_n) > 2^n$となる。このとき、$a := sum_(n=1)^oo 2^(-n) a_n$は
+  $
+    norm(a) <= sum_(n=1)^oo 2^(-n) norm(a_n) <= sum_(n=1)^oo 2^(-n) = 1
+  $
+  より絶対収束して$A_plus$の元を定めるが、任意の$N in NN$に対して
+  $
+    phi(a) >= phi(sum_(n=1)^N 2^(-n) a_n) = sum_(n=1)^N 2^(-n) phi(a_n) > N
+  $
+  となり、矛盾である。したがって、$phi_(|A_plus)$は有界である。
+  
+  一般の$a in A$に対して、$a = a_1 - a_2 + i a_3 - i a_4 space (a in A_plus)$と表せることを用いると、$phi$が有界であることがわかる。
+]
+
+= GNS construction
+
+
 
 #pagebreak()
 @strung2021introduction @tomatsu2024operators
