@@ -55,7 +55,7 @@
     cell-size: 20mm,
     $
       KS(A) edge("hook->") edge("d", "=") & ToeS0(A) edge("d", "hook-->") edge(->>) & C^oo_0(TT backslash {1}, A) edge("d", "hook->")\
-      KS(A) edge("hook->") & ToeS(A) edge(->>) edge("d", l, ->>) & C^oo (TT, A) edge("d", upright("ev")_1, ->>) \
+      KS(A) edge("hook->") & ToeS(A) edge(pi, ->>) edge("d", l, ->>) & C^oo (TT, A) edge("d", upright("ev")_1, ->>) \
       & A edge("=") & A
     $,
   )
@@ -91,7 +91,7 @@
         & ToeS edge("dl", label-side: #right, label: kappa : x |-> E_00 times.o x, ->) edge("dr", bend: #(-18deg), id, label-pos: #0.25, "<-") edge("dr", q compose l, bend: #(+18deg), <-)\
         KS times.o ToeS edge(iota, "hook->") edge("d", "=")
         & ToeSbar edge("d", r, "->") edge(label-side: #left, p, label-pos: #0.30, ->>)
-        & ToeS edge("d", label-side: #left, v |-> pi(v) times.o v, "->") edge("l", bend: #30deg, s, ->)\
+        & ToeS edge("d", label-side: #left, v |-> pi(v) times.o 1, "->") edge("l", bend: #30deg, s, ->)\
         KS times.o ToeS edge("hook->") & ToeS times.o ToeS edge(->>) & C^oo (TT) times.o ToeS \
       $,
     )
