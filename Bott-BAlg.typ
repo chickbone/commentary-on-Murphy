@@ -104,6 +104,28 @@
   $
   はhomomorphism$s, alpha : ToeS -> ToeSbar$をそれぞれ導く。
 
+
+  #figure(caption: [pullbackの普遍性による$s, alpha$の定義])[
+    #diagram(
+      cell-size: 20mm,
+      node((-1,-1), $ToeS$, name: <domT>),
+
+      edge(<domT>, <tot>, $s_0 space("resp."alpha_0)$, bend: -25deg,"->"),
+      edge(<domT>, <tsbar>, $s space("resp."alpha)$, bend: +0deg,"-->"),
+      edge(<domT>, <codT>, $id$, bend: +25deg,"->"),
+      
+      node((0,0), $ToeSbar$, name: <tsbar>),
+      node((0,1), $ToeS times.o ToeS$, name: <tot>),
+      node((1,0), $ToeS$, name: <codT>),
+      node((1,1), $C^oo (TT) times.o ToeS$, name: <final>),
+
+      edge(<tsbar>, <codT>, $p$,  "->"),
+      edge(<tsbar>, <tot>, $r$, "->"),
+      edge(<tot>, <final>, "->"),
+      edge(<codT>, <final>, "->"),
+    )
+  ]
+
   ここで$p compose s = id$であるから、中央の完全列は分裂する。よって$K_*(iota)$は単射。
 
   また、$K_*$のstabilityより$K_*(kappa)$は同型。よって$j = iota compose kappa : ToeS -> ToeSbar$とおくと、$K_*(j)$は単射となることがわかる。
@@ -174,10 +196,9 @@ $ToeS0(A)$の$K$理論の消滅がBott map
 $ beta :K_(2 + *) (A) --> K_* (A) $
 の同型性を導くのは @MR2340673 の通りである。(Bott 周期性)
 
-#pagebreak()
+#v(2em)
 
 = 感想
-
 
 == 結果について
 @MR2340673 はとても洗練されたよい教科書ではあるのだが、肝心のBott周期性の証明において致命的なミスがあるのは玉に瑕である。(筆者が単に誤読しているだけかもしれないが。)
@@ -208,7 +229,6 @@ $
 ただ$j$を合成した上で$alpha$を足せばhomotopicになるというのが証明の核心である。ここから$K_*(q compose l) = id$が得られるのはひとえにstabilityとsplit-exactnessのおかげである。即ち、$K_*(q compose l) = id$を示すには$ToeS$内部ではなく外部の$ToeSbar$においてhomotopyを構成すれば十分である。このような$K_*$の"柔軟性"が$K$理論を計算可能なものとして、豊かな理論を織り成し、華やかな応用を生み出しているのではないかと思われる。
 
 #pagebreak()
-
 #[
   #set par(justify: false)
   #bibliography("references.bib", title: "参考文献")
